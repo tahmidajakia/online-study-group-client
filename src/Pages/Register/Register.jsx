@@ -1,9 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContexts } from "../../Providers/AuthProviders";
 
 
 const Register = () => {
+  const [registerError,setRegisterError] = useState('')
+  const [success,setSuccess] = useState('')
 
     const { createUser } = useContext(AuthContexts);
 
@@ -18,6 +20,25 @@ const Register = () => {
         const password = form.get('password')
         console.log(name,email,photo,password);
 
+        setRegisterError('')
+        setSuccess('')
+
+        if(password.length < 6){
+          setRegisterError('Password should be at least 6 character or longer');
+          return;
+        }
+        else if(!/[A-Z]/.test(password)){
+          setRegisterError('Your password should have at least one uppercase characters.');
+          return;
+    
+        }
+        else if(!/[a-z]/.test(password)){
+          setRegisterError('Your password should have at least one Lowercase characters.');
+          return;
+    
+        }
+        
+
         createUser(email,password)
         .then(result =>{
             console.log(result.user)
@@ -28,14 +49,14 @@ const Register = () => {
             //   confirmButtonText: 'Cool'
             // })
             // Navigate('/')
-            // // setSuccess('User created successfully')
+            setSuccess('User created successfully')
             // toast.success("Successfully Registered")
            
         })
         .catch(error =>{
             console.error(error)
             // toast.warning("Already Registered,Please Login")
-            // setRegisterError(error.message)  
+            setRegisterError(error.message)  
         })
     }
     return (
@@ -43,7 +64,7 @@ const Register = () => {
             <div className="text-center text-3xl mt-10 mb-16 font-semibold text-orange-600">
        <h1 className="text-3xl font-bold"> Please Register</h1>
        </div>
-        <div className="flex justify-center items-center shadow-2xl bg-orange-100 w-1/2 mx-auto">
+        <div className="flex justify-center items-center shadow-2xl bg-orange-100 w-1/2 mx-auto mb-24">
       <form onSubmit={handleRegister} className="card-body ">
         <div className="form-control">
           <label className="label">
@@ -68,7 +89,7 @@ const Register = () => {
             <span className="label-text">Password</span>
           </label>
           <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
-          <span>Show</span>
+          {/* <span>Show</span> */}
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
@@ -81,9 +102,12 @@ const Register = () => {
       
     </div>
     <div className="text-center mt-5">
-    {/* {
+    {
         registerError && <p className="text-red-700">{registerError}</p>
-      } */}
+      }
+    {
+        success && <p className="text-green-700">{success}</p>
+      }
     </div>
         </div>
     );

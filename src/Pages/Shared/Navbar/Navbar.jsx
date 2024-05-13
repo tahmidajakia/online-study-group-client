@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContexts } from "../../../Providers/AuthProviders";
 
-import logo from '../../../assets/images/logo2.png'
+import logo from '../../../assets/images/log.png'
 
 const Navbar = () => {
  
@@ -16,10 +16,10 @@ const Navbar = () => {
       }
 
     const navLinks = <>
-        <button className="border mr-3 p-3 rounded-lg bg-red-600 text-white font-bold"><NavLink to='/'>Home</NavLink></button>
-        <button className="border mr-3 p-3 rounded-lg bg-red-600 text-white font-bold"><NavLink to='/allAssignment'>Assignment</NavLink></button>
-        <button className="border mr-3  p-3 rounded-lg bg-red-600 text-white font-bold"><NavLink to='/create-assignment'>Create Assignment</NavLink></button>
-        <button  className="border mr-3 p-3 font-bold rounded-lg bg-red-600 text-white"><NavLink to='/pending-assignment'>Pending Assignment</NavLink></button>
+        <button className="text-base mr-3 p-3 rounded-lg text-orange-600 font-bold"><NavLink to='/'>Home</NavLink></button>
+        <button className="text-base mr-3 p-3 rounded-lg  text-orange-600 font-bold"><NavLink to='/allAssignment'>Assignment</NavLink></button>
+        <button className="text-base mr-3  p-3 rounded-lg  text-orange-600 font-bold"><NavLink to='/create-assignment'>Create Assignment</NavLink></button>
+        <button  className="text-base mr-3 p-3 font-bold rounded-lg text-orange-600 "><NavLink to='/pending-assignment'>Pending Assignment</NavLink></button>
     </>
 
 
@@ -37,7 +37,7 @@ const Navbar = () => {
     </div>
     <div className="flex">
     <Link to='/' >
-   <img className="w-1/2" src={logo} alt="" />
+   <img className="w-1/3" src={logo} alt="" />
    
    </Link>
     </div>
@@ -58,16 +58,16 @@ const Navbar = () => {
       </div>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
         <Link to='/my-submit-assignment'>
-        <li><a>My Assignments</a></li>
+        <li className="bg-orange-600 text-white rounded-xl"><a>My Assignments</a></li>
         </Link>
         <li><a onClick={handleSignOut} >Logout</a></li>
       </ul>
     </div>
         :
         <Link to='/login' >
-     <button className="border mr-3 p-3 rounded-lg bg-blue-700 text-white">Login</button>
+     <button className="border mr-3 p-3 rounded-lg bg-orange-600 text-white">Login</button>
      <Link to='/register'>
-    <button className="border ml-3 p-3 rounded-lg border-blue-700 text-blue-700">Register</button>
+    <button className="border ml-3 p-3 rounded-lg border-orange-600 text-orange-600">Register</button>
     </Link>
     
     </Link>

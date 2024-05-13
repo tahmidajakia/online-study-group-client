@@ -57,10 +57,10 @@ const handleCreate = event =>{
     return (
         <div>
             <div>
-                <div className="text-center text-3xl mt-10 mb-8 font-semibold text-red-800">
+                <div className="text-center text-3xl mt-10 mb-8 font-semibold text-orange-600">
        <h1 className="text-3xl font-bold" >Create Assignment</h1>
        </div>
-        <div className="flex justify-center items-center shadow-2xl bg-red-100 w-1/2 mx-auto">
+        <div className="flex justify-center items-center shadow-2xl bg-orange-100 w-1/2 mx-auto mb-24">
       <form onSubmit={handleCreate}  className="card-body">
         <div className=" form-control ">
           <div className="flex justify-center gap-2">
@@ -126,7 +126,7 @@ const handleCreate = event =>{
           </div>
     
         <div className="form-control mt-6">
-          <button className="btn bg-red-800 text-white">Add</button>
+          <button className="btn bg-orange-600 text-white">Add</button>
         </div>
       </form>
     </div>

@@ -53,7 +53,7 @@ const TakeAssignment = () => {
     }
     return (
         <div className="flex justify-between mb-32">
-            <div className='border border-red-600 p-10'>
+            <div className='border border-orange-600 p-10'>
                 <img className='' src={img} alt="" />
                 <h1 className='text-2xl font-bold'>Examiner Name: {email}</h1>
 
@@ -88,7 +88,7 @@ const TakeAssignment = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Take</button>
+          <button className="bg-orange-600 text-white p-3 rounded-2xl">Take</button>
         </div>
       </form>
     </div>

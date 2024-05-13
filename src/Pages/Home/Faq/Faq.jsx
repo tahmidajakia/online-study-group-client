@@ -3,7 +3,7 @@ import faq from '../../../assets/images/faqq.png'
 const Faq = () => {
     return (
         <div>
-           <div className='bg-red-50 rounded-xl mb-12 mt-16'>
+           <div className='bg-orange-50 rounded-xl mb-12 mt-16'>
             <div className='text-center p-6'>
             <h1 className='text-4xl font-bold mt-3 mb-3 '>Frequently Asked Question</h1>
             <p>Read the answers to some of the most popular questions.</p>
@@ -14,7 +14,7 @@ const Faq = () => {
                 </div>
                 <div>
                 <div className="mb-10 mt-10 space-y-4 ml-10">
-            <div className="collapse collapse-arrow bg-red-100">
+            <div className="collapse collapse-arrow bg-orange-100">
               <input type="radio" name="my-accordion-2" defaultChecked /> 
               <div className="collapse-title text-xl font-medium">
               How many members are in a Study Group?
@@ -23,7 +23,7 @@ const Faq = () => {
                 <p>Each group has a different ideal size. Most groups are between 8 and 20 members, with 12 to 15 being the sweet spot.</p>
                      </div>
               </div>
-             <div className="collapse collapse-arrow bg-red-100">
+             <div className="collapse collapse-arrow bg-orange-100">
               <input type="radio" name="my-accordion-2" /> 
                  <div className="collapse-title text-xl font-medium">
                  How often do Study Groups meet?
@@ -32,7 +32,7 @@ const Faq = () => {
                      <p>Meetings are held two to three times per year and last approximately two days. Each group decides together how often to meet and the length of each meeting. Meeting locations are decided by the members.</p>
                  </div>
                   </div>
-                 <div className="collapse collapse-arrow bg-red-100">
+                 <div className="collapse collapse-arrow bg-orange-100">
                    <input type="radio" name="my-accordion-2" /> 
                   <div className="collapse-title text-xl font-medium">
                   What are the qualifications to be a Study Group member?
@@ -46,7 +46,7 @@ const Faq = () => {
                   not be a competitor with any of the other members</p>
                   </div>
             </div>
-            <div className="collapse collapse-arrow bg-red-100">
+            <div className="collapse collapse-arrow bg-orange-100">
               <input type="radio" name="my-accordion-2" defaultChecked /> 
               <div className="collapse-title text-xl font-medium">
               If I join a group, what is the commitment?
@@ -55,7 +55,7 @@ const Faq = () => {
                 <p>If you choose to join a group, your financial commitment is quarter to quarter.</p>
                      </div>
               </div>
-             <div className="collapse collapse-arrow bg-red-100">
+             <div className="collapse collapse-arrow bg-orange-100">
               <input type="radio" name="my-accordion-2" /> 
                  <div className="collapse-title text-xl font-medium">
                  What is the cost to join a Study Group?

@@ -14,8 +14,8 @@ const PendingAssignment = () => {
     console.log(submitted)
     return (
         <div>
-            <h1 className="text-center font-bold text-2xl mt-3 mb-16">pending assignment <span className="bg-red-700 text-white rounded-2xl p-3">{submitted.length}</span></h1>
-            <div className="overflow-x-auto mb-16 border border-red-700 p-5">
+            <h1 className="text-center font-bold text-2xl mt-3 mb-16">pending assignment <span className="bg-orange-700 text-white rounded-2xl p-3">{submitted.length}</span></h1>
+            <div className="overflow-x-auto mb-16 border border-orange-700 p-5">
             <table className="table table-xs">
     <thead>
       <tr> 

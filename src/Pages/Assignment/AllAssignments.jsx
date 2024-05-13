@@ -12,7 +12,7 @@ const AllAssignments = () => {
     },[])
     return (
         <div>
-            <h1 className="text-center font-bold text-4xl mb-10 mt-6">All Assignments <span className="bg-red-600 text-white py-2 px-4 rounded-xl">{allAssignment.length}</span></h1>
+            <h1 className="text-center font-bold text-4xl mb-10 mt-6">All Assignments <span className="bg-orange-600 text-white py-2 px-4 rounded-xl">{allAssignment.length}</span></h1>
             <div className="grid gap-6 mb-14 grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
                 {
                     allAssignment.map(assignments => <AllAssignmentCard

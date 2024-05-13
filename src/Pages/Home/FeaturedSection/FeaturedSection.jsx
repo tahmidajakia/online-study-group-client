@@ -15,8 +15,8 @@ const FeaturedSection = () => {
 
     
     return (
-        <div>
-            <h1 className="text-center text-4xl font-bold mt-20 mb-14">Assignment Featured</h1>
+        <div className=" p-5 mt-6 rounded-2xl">
+            <h1 className="text-center text-4xl font-bold mt-5 mb-14">Assignment Featured</h1>
             <div className="grid gap-3 grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
                 {
                     assignment.slice(0,dataLength).map(assignments => <FeaturedCard
@@ -27,7 +27,7 @@ const FeaturedSection = () => {
             </div>
             <div className="flex justify-center mt-14">
                 <Link to='/allAssignment'>
-                <button className="btn bg-red-700 py-2 px-10 text-white mb-8">Show all</button>
+                <button className="btn bg-orange-600 py-2 px-10 text-white mb-8">Show all</button>
                 </Link>
             </div>
         </div>

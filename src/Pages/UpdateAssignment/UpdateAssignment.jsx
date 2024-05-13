@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContexts } from "../../Providers/AuthProviders";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Swal from "sweetalert2";
 
 
 const UpdateAssignment = () => {
@@ -45,7 +46,7 @@ const UpdateAssignment = () => {
             if(data.insertedId){
                 Swal.fire({
                     title: 'Success!',
-                    text: '',
+                    text: 'Updated Successfully',
                     icon: 'success',
                     confirmButtonText: 'Cool'
                   })

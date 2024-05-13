@@ -8,7 +8,7 @@ const Login = () => {
 
     const navigate = useNavigate();
 
-    const {signIn} = useContext(AuthContexts);
+    const {signIn,signInWithGoogle} = useContext(AuthContexts);
 
     const handleLogin = e => {
         e.preventDefault();
@@ -26,6 +26,17 @@ const Login = () => {
            .catch(error =>{
              console.error(error);
     })
+    }
+
+
+    const handleGoogleSign = () => {
+      signInWithGoogle()
+      .then(result => {
+        console.log(result.user);
+      })
+      .catch(error =>{
+        console.error(error);
+      })
     }
     return (
         <div>
@@ -52,14 +63,11 @@ const Login = () => {
         <div className="form-control mt-6">
           <button className="btn bg-orange-600 text-white">Login</button>
         </div>
-        <h1 className="mt-10">Do not have an account <Link className="text-orange-600 font-bold" to='/register'>Register</Link></h1>
+        <h1 className="mt-10">Do not have an account please <Link className="text-orange-600 font-bold" to='/register'>Register</Link></h1>
         <div className="flex">
-        <p>
-          <button className="bg-orange-600 text-white p-3 rounded-lg">Google</button>
-        </p>
-        <p>
-          <button className="bg-orange-600 text-white p-3 rounded-lg">Github</button>
-        </p>
+        <div className=" flex justify-center mx-auto mt-5">
+        <button onClick={handleGoogleSign} className="bg-orange-600 text-white p-3 rounded-lg">Google</button>
+        </div>
         </div>
       </form>
     </div>

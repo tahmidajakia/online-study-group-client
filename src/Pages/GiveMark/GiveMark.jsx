@@ -19,19 +19,20 @@ const GiveMark = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify({status: 'confirm'})
+            body: JSON.stringify({status: 'Complete'})
         })
         .then(res => res.json())
         .then(data => console.log(data))
         
     }
     return (
-        <div>
+        <div className="space-y-6 mb-20 mt-3">
             {submitted.map(submit => (
             <div key={submit._id}>
             <div className=" flex justify-center items-center text-center mx-auto gap-10">
             <div className="border border-red-500  w-1/2 p-10">
                 <div>
+                    <h1 className="font-bold mb-5 text-2xl border border-red-600 p-5">Email: {submit.email}</h1>
                     <h1 className="font-bold mb-5 text-2xl border border-red-600 p-5">Submitted Assignment Pdf File:  {submit.pdf_file}</h1>
                     <h1 className="font-bold mb-5 text-2xl border border-red-600 p-5">Note: {submit.note}</h1>
                     
@@ -50,7 +51,7 @@ const GiveMark = () => {
                   </label>
                    <input type="text" name="feedback" placeholder="Feedback" className="input input-bordered" required />
                  </div>
-                 <button onClick={() => handleSubmit(submit._id,submit.status, 'Complete')} className="btn btn-primary w-full mt-6">Submit</button>
+                 <button onClick={() => handleSubmit(submit._id,submit.status, 'Complete')} className="btn bg-orange-600 text-white w-full mt-6">Give Mark</button>
             </form>
 
         </div>

@@ -1,5 +1,5 @@
 import img from '../../assets/images/RS8101_GettyImages-658984533-hig.jpg'
-
+import Swal from 'sweetalert2'
 import { useContext } from "react";
 import { AuthContexts } from "../../Providers/AuthProviders";
 import { useLoaderData } from "react-router-dom";
@@ -43,7 +43,7 @@ const TakeAssignment = () => {
             if(data.insertedId){
                 Swal.fire({
                     title: 'Success!',
-                    text: 'Tourist Spot Added Successfully',
+                    text: 'Take Assignment Successfully',
                     icon: 'success',
                     confirmButtonText: 'Cool'
                   })
@@ -83,12 +83,9 @@ const TakeAssignment = () => {
             <span className="label-text">Note Text</span>
           </label>
           <input type="text" name="note" placeholder="Text Area" className="input input-bordered h-[100px]" required />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
         </div>
         <div className="form-control mt-6">
-          <button className="bg-orange-600 text-white p-3 rounded-2xl">Take</button>
+          <button className="bg-orange-600 btn text-white p-3 rounded-2xl">Submit</button>
         </div>
       </form>
     </div>

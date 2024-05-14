@@ -43,17 +43,23 @@ const AllAssignmentCard = ({assignments}) => {
              <h2 className="card-title">{assignment_title}</h2>
              <p>{marks}</p>
             <div className="flex gap-4">
-              <div>
+              {
+                user &&
+                <div>
                <Link to={`/updateAssignment/${_id}`}>
                <button  className="bg-orange-600 text-white px-5  py-2 rounded-lg ">Update</button>
                 </Link>
               </div>
-              <div>
+              }
+              {
+                user && 
+                <div>
                <Link
                >
                <button onClick={() => handleDelete(assignments._id)}  className="bg-orange-600 text-white px-5 py-2 rounded-lg ">Delete</button>
                 </Link>
               </div>
+              }
             </div>
             <div className="card-actions">
              <Link to={`/assignmentDetails/${_id}`}>

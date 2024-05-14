@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContexts } from "../../Providers/AuthProviders";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 
 
 const UpdateAssignment = () => {
+  const navigate = useNavigate()
     const {user} = useContext(AuthContexts)
     const assignments = useLoaderData();
     const [startDate, setStartDate] = useState(new Date());
@@ -50,6 +51,7 @@ const UpdateAssignment = () => {
                     icon: 'success',
                     confirmButtonText: 'Cool'
                   })
+                  navigate('/allAssignment')
 
             }
         })

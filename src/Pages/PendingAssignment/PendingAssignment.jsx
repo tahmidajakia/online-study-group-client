@@ -24,7 +24,7 @@ const PendingAssignment = () => {
         <th className="text-2xl font-bold">Assignment status</th> 
         <th className="text-2xl font-bold">Assignment marks</th> 
         {/* <th>My obtained marks</th>  */}
-        <th className="text-2xl font-bold">Marks</th>
+        <th className="text-2xl font-bold">Give Marks</th>
         {/* <th>pdf file</th> */}
       </tr>
     </thead> 

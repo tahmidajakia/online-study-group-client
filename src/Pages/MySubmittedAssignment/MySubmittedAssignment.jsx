@@ -21,7 +21,10 @@ const MySubmittedAssignment = () => {
       <tr> 
         <th className="text-2xl font-bold text-black">Email</th> 
         <th className="text-2xl font-bold text-black"> Assignment title</th> 
-        <th className="text-2xl font-bold text-black">Assignment status</th> 
+        <th className="text-2xl font-bold text-black">Status</th> 
+        <th className="text-2xl font-bold text-black">Total Marks</th> 
+        <th className="text-2xl font-bold text-black">Obtained Marks</th> 
+        <th className="text-2xl font-bold text-black">Feedback</th> 
         {/* <th>Assignment marks</th> 
         <th>My obtained marks</th> 
         <th>Feedback</th> */}
@@ -51,7 +54,7 @@ const MySubmittedAssignment = () => {
             
           </div></td>  
         {/* <td>{submit.mark}</td>  */}
-        <td></td> 
+        <td>{submit.mark}</td> 
         <td></td> 
         <td></td>
       </tr>

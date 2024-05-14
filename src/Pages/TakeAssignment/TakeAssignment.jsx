@@ -73,7 +73,7 @@ const TakeAssignment = () => {
           <label className="label">
             <span className="label-text">PDF File</span>
           </label>
-          <input type="file" name="pdf_file" placeholder="PDF File" className="input input-bordered" required />
+          <input type="url" label='pdf/Doc link' name="pdf_file" placeholder="PDF File" className="input input-bordered" required />
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>

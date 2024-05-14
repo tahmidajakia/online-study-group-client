@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContexts } from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
 
@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 const Register = () => {
   const [registerError,setRegisterError] = useState('')
   const [success,setSuccess] = useState('')
+  const navigate = useNavigate()
 
     const { createUser } = useContext(AuthContexts);
 
@@ -49,8 +50,9 @@ const Register = () => {
               icon: 'success',
               confirmButtonText: 'Cool'
             })
-            Navigate('/')
-            setSuccess('User created successfully')
+            navigate(location?.state ? location.state : '/')
+            // Navigate('/')
+            // setSuccess('User created successfully')
             // toast.success("Successfully Registered")
            
         })

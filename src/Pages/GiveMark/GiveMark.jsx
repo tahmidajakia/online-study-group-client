@@ -6,7 +6,7 @@ const GiveMark = () => {
     const {user} = useContext(AuthContexts)
     const [submitted,setSubmitted] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/pending-assignment/${user?.email}`)
+        fetch(`https://online-study-group-assignment-server.vercel.app/pending-assignment/${user?.email}`)
         .then(res => res.json())
         .then(data => setSubmitted(data))
     },[user])
@@ -14,7 +14,7 @@ const GiveMark = () => {
 
     const handleSubmit = (_id,prevStatus,status) => {
         console.log(_id,prevStatus,status)
-        fetch(`http://localhost:5000/pending-status/${_id}`,{
+        fetch(`https://online-study-group-assignment-server.vercel.app/pending-status/${_id}`,{
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -32,7 +32,7 @@ const GiveMark = () => {
             <div className=" flex justify-center items-center text-center mx-auto gap-10">
             <div className="border border-red-500  w-1/2 p-10">
                 <div>
-                    <h1 className="font-bold mb-5 text-2xl border border-red-600 p-5">Email: {submit.email}</h1>
+                    <h1 className="font-bold mb-5 text-2xl border border-red-600 p-5">Email:{submit.email}</h1>
                     <h1 className="font-bold mb-5 text-2xl border border-red-600 p-5">Submitted Assignment Pdf File:  {submit.pdf_file}</h1>
                     <h1 className="font-bold mb-5 text-2xl border border-red-600 p-5">Note: {submit.note}</h1>
                     

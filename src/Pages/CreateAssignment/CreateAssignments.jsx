@@ -32,7 +32,7 @@ const handleCreate = event =>{
     }
         console.log(assignmentData)
 
-        fetch('http://localhost:5000/assignment',{
+        fetch('https://online-study-group-assignment-server.vercel.app/assignment',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

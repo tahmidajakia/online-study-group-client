@@ -8,7 +8,7 @@ const FeaturedSection = () => {
 
     const [ assignment,setAssignment ] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/assignment')
+        fetch('https://online-study-group-assignment-server.vercel.app/assignment')
         .then(res => res.json())
         .then(data => setAssignment(data))
     },[])

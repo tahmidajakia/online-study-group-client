@@ -30,7 +30,7 @@ const TakeAssignment = () => {
             status,
             // examiner:{email}
         }
-        fetch('http://localhost:5000/takeAssignment',{
+        fetch('https://online-study-group-assignment-server.vercel.app/takeAssignment',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

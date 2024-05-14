@@ -33,13 +33,16 @@ const Navbar = () => {
       }
 
     const navLinks = <>
-        <button className="text-base mr-3 p-3 rounded-lg text-orange-600 font-bold"><NavLink to='/'>Home</NavLink></button>
-        <button className="text-base mr-3 p-3 rounded-lg  text-orange-600 font-bold"><NavLink to='/allAssignment'>Assignment</NavLink></button>
-        <button className="text-base mr-3  p-3 rounded-lg  text-orange-600 font-bold"><NavLink to='/create-assignment'>Create Assignment</NavLink></button>
+        <button className="text-base mr-1 p-3 rounded-lg text-orange-600 font-bold"><NavLink to='/'>Home</NavLink></button>
+        <button className="text-base mr-1 p-3 rounded-lg  text-orange-600 font-bold"><NavLink to='/allAssignment'>Assignment</NavLink></button>
+        <button className="text-base mr-1 p-3 rounded-lg  text-orange-600 font-bold" >About</button>
+        <button className="text-base mr-1 p-3 rounded-lg  text-orange-600 font-bold">Contact</button>
         
         { user &&
+        
           <>
-          <button  className="text-base mr-3 p-3 font-bold rounded-lg text-orange-600 "><NavLink to='/pending-assignment'>Pending Assignment</NavLink></button>
+          <button className="text-base mr-1  p-3 rounded-lg  text-orange-600 font-bold"><NavLink to='/create-assignment'>Create Assignment</NavLink></button>
+          <button  className="text-base mr-1 p-3 font-bold rounded-lg text-orange-600 "><NavLink to='/pending-assignment'>Pending Assignment</NavLink></button>
 
           </>
         }

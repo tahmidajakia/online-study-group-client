@@ -7,7 +7,7 @@ const PendingAssignment = () => {
     const {user} = useContext(AuthContexts)
     const [submitted,setSubmitted] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/pending-assignment/${user?.email}`)
+      fetch(`https://online-study-group-assignment-server.vercel.app/pending-assignment/${user?.email}`)
         .then(res => res.json())
         .then(data => setSubmitted(data))
     },[user])

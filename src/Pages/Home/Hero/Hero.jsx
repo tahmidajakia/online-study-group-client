@@ -8,7 +8,7 @@ const Hero = () => {
                     <h1 className='text-white pt-60 pl-16 text-7xl font-semibold'>Education is the best <br /> key success in life</h1>
                     <p className='w-1/2  text-white mt-8 ml-16'>Optimism Is The Faith That Leads To Achievements.Nothing Can Be Done Without Hope and Confidence.Let Curiosity drive you to never stop learning.</p>
                     <div>
-                        <button className='mt-8 ml-16 mr-3 bg-red-600 rounded-lg text-white py-3 px-4'>Discover More</button>
+                        <button className='mt-8 ml-16 mr-3 bg-orange-600 rounded-lg text-white py-3 px-4'>Discover More</button>
                         <button className='text-white border rounded-lg py-3 px-4 border-white'>Contact Us</button>
                     </div>
 

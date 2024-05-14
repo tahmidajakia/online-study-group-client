@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContexts } from "../../../Providers/AuthProviders";
 
-import logo from '../../../assets/images/log.png'
+import logo from '../../../assets/images/logoo.png'
 
 const Navbar = () => {
   const [theme,setTheme] = useState('light')
@@ -33,16 +33,15 @@ const Navbar = () => {
       }
 
     const navLinks = <>
-        <button className="text-base mr-1 p-3 rounded-lg text-orange-600 font-bold"><NavLink to='/'>Home</NavLink></button>
-        <button className="text-base mr-1 p-3 rounded-lg  text-orange-600 font-bold"><NavLink to='/allAssignment'>Assignment</NavLink></button>
-        <button className="text-base mr-1 p-3 rounded-lg  text-orange-600 font-bold" >About</button>
-        <button className="text-base mr-1 p-3 rounded-lg  text-orange-600 font-bold">Contact</button>
+        <button className="text-base  p-3 rounded-lg text-orange-600 font-bold"><NavLink to='/'>Home</NavLink></button>
+        <button className="text-base  p-3 rounded-lg  text-orange-600 font-bold"><NavLink to='/allAssignment'>Assignment</NavLink></button>
+        <button className="text-base  p-3 rounded-lg  text-orange-600 font-bold">Contact</button>
         
         { user &&
         
           <>
-          <button className="text-base mr-1  p-3 rounded-lg  text-orange-600 font-bold"><NavLink to='/create-assignment'>Create Assignment</NavLink></button>
-          <button  className="text-base mr-1 p-3 font-bold rounded-lg text-orange-600 "><NavLink to='/pending-assignment'>Pending Assignment</NavLink></button>
+          <button className="text-base   p-3 rounded-lg  text-orange-600 font-bold"><NavLink to='/create-assignment'>Create Assignment</NavLink></button>
+          <button  className="text-base  p-3 font-bold rounded-lg text-orange-600 "><NavLink to='/pending-assignment'>Pending Assignment</NavLink></button>
 
           </>
         }
@@ -63,7 +62,7 @@ const Navbar = () => {
     </div>
     <div className="flex">
     <Link to='/' >
-   <img className="w-1/3" src={logo} alt="" />
+   <img className="w-full" src={logo} alt="" />
    
    </Link>
     </div>

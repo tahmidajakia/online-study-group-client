@@ -10,10 +10,10 @@ const AllAssignmentCard = ({assignments}) => {
 
     
 
-    const handleDelete = _id => {
+    const handleDelete = id => {
       const proceed = confirm('Are you sure want to delete');
       if (proceed){
-        fetch(`https://online-study-group-assignment-server.vercel.app/assignment/${_id}`,{
+        fetch(`https://online-study-group-assignment-server.vercel.app/assignment/${id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())

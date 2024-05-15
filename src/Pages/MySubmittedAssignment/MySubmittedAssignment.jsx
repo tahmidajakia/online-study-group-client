@@ -20,9 +20,9 @@ const MySubmittedAssignment = () => {
     <thead>
       <tr> 
         <th className="text-2xl font-bold text-black">Email</th> 
-        <th className="text-2xl font-bold text-black"> Assignment title</th> 
+        <th className="text-2xl font-bold text-black"> Title</th> 
         <th className="text-2xl font-bold text-black">Status</th> 
-        <th className="text-2xl font-bold text-black">Total Marks</th> 
+        <th className="text-2xl font-bold text-black"> Marks</th> 
         <th className="text-2xl font-bold text-black">Obtained Marks</th> 
         <th className="text-2xl font-bold text-black">Feedback</th> 
         {/* <th>Assignment marks</th> 
@@ -33,9 +33,9 @@ const MySubmittedAssignment = () => {
     <tbody>
       {submitted.map(submit => (
         <tr key={submit._id}>
-        <th className="text-2xl">{submit.email}</th> 
-        <td className="text-2xl font-bold" >{submit.assignment_title}</td> 
-        <td className="text-2xl font-bold"><div className={`${
+        <th className="">{submit.email}</th> 
+        <td className=" font-bold" >{submit.assignment_title}</td> 
+        <td className="font-bold"><div className={`${
               submit.status === 'pending' && 'bg-yellow-400 text-yellow-500'
             }
             ${

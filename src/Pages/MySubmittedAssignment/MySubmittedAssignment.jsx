@@ -55,8 +55,8 @@ const MySubmittedAssignment = () => {
           </div></td>  
         {/* <td>{submit.mark}</td>  */}
         <td>{submit.mark}</td> 
-        <td></td> 
-        <td></td>
+        <td>{submit.marks}</td> 
+        <td>{submit.feedback}</td>
       </tr>
       ))}
     </tbody> 

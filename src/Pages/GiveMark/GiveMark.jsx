@@ -12,8 +12,8 @@ const GiveMark = () => {
     },[user])
     console.log(submitted)
 
-    const handleSubmit = (_id,prevStatus,status) => {
-        console.log(_id,prevStatus,status)
+    const handleSubmit = (_id,prevStatus,status,marks,feedback) => {
+        console.log(_id,prevStatus,status,marks,feedback)
         fetch(`https://online-study-group-assignment-server.vercel.app/pending-status/${_id}`,{
             method: 'PATCH',
             headers: {
@@ -51,7 +51,7 @@ const GiveMark = () => {
                   </label>
                    <input type="text" name="feedback" placeholder="Feedback" className="input input-bordered" required />
                  </div>
-                 <button onClick={() => handleSubmit(submit._id,submit.status, 'Complete')} className="btn bg-orange-600 text-white w-full mt-6">Give Mark</button>
+                 <button onClick={() => handleSubmit(submit._id,submit.status, 'Complete',submit.marks,submit.feedback)} className="btn bg-orange-600 text-white w-full mt-6">Give Mark</button>
             </form>
 
         </div>

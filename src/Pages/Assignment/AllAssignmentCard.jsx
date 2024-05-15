@@ -4,7 +4,7 @@ import { AuthContexts } from "../../Providers/AuthProviders";
 
 
 const AllAssignmentCard = ({assignments}) => {
-  const [deleted,setDeleted] = useState([])
+  const [allAssignment,setAllAssignment] = useState([])
   const {user} = useContext(AuthContexts)
     const {_id,assignment_title, marks,due_date,thumbnail_image_url,difficulty_level,email} = assignments;
 
@@ -14,23 +14,21 @@ const AllAssignmentCard = ({assignments}) => {
       if(user?.email !== email){
         alert('you cannot delete others data')
       }
-      if(user?.email === email){
+       if(user?.email === email){
         const proceed = confirm('Are you sure want to delete');
       if (proceed){
         fetch(`https://online-study-group-assignment-server.vercel.app/assignment/${id}`,{
-            method: 'DELETE'
+            method: 'DELETE',
         })
-        .then(res => res.json())
-        .then(data => {
+        .then((res) => res.json()) 
+        .then((data) => {
           console.log(data)
           if(data.deletedCount > 0){
             alert('deleted successfully')
-            const remaining = deleted.filter(deletes => deletes._id !== _id)
-            setDeleted(remaining)
+            const remaining = allAssignment.filter(assignments => assignments._id !== id)
+            setAllAssignment(remaining)
           }
         })
-        
-
       }
 
       }

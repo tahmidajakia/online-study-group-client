@@ -56,7 +56,7 @@ const PendingAssignment = () => {
 
           </td> 
         <td><Link to='/give-mark'>
-        <button className="bg-red-700 text-white px-5 py-4 rounded-xl">Give Mark</button>
+        <button className="bg-orange-700 text-white px-5 py-4 rounded-xl">Give Mark</button>
         </Link>
         </td> 
         {/* <td>{submit.pdf_file}</td>  */}

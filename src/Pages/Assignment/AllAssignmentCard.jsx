@@ -12,12 +12,12 @@ const AllAssignmentCard = ({assignments}) => {
 
     const handleDelete = id => {
       if(user?.email !== email){
-        alert('you cannot delete others data')
+        alert('Oops! Sorry, You Cannot Delete Others Data')
       }
        if(user?.email === email){
         const proceed = confirm('Are you sure want to delete');
       if (proceed){
-        fetch(`https://online-study-group-assignment-server.vercel.app/assignment/${id}`,{
+        fetch(`https://online-study-group-assignment-server.vercel.app/assignment/${_id}`,{
             method: 'DELETE',
         })
         .then((res) => res.json()) 

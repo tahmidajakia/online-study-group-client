@@ -5,7 +5,7 @@ import { AuthContexts } from "../../../Providers/AuthProviders";
 
 const FeaturedCard = ({assignments}) => {
     const {_id,assignment_title, marks,due_date,thumbnail_image_url} = assignments;
-  const {user} = useContext(AuthContexts)
+  const {user} = useContext(AuthContexts);
     
     return (
       <div>

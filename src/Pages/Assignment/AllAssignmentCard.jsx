@@ -34,7 +34,7 @@ const AllAssignmentCard = ({assignments}) => {
       }
       
       
-    }
+    };
     return (
       
         <div>
